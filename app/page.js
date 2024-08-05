@@ -24,22 +24,6 @@ export default function Home() {
             Built using the latest technologies, Inventory MS ensures smooth performance and scalability for businesses of all sizes.
           </p>
         </section>
-
-        {/* Founder Section */}
-        <section className="py-20 bg-gray-100">
-          <h2 className="text-4xl font-bold mb-6 text-center">Meet the Founder</h2>
-          <div className="flex flex-col items-center">
-            <img src="/profile-pic.png" alt="Founder" className="w-40 h-40 rounded-full mb-4" />
-            <h3 className="text-2xl font-semibold">Abdihamid Moallim</h3>
-            <p className="text-lg text-center max-w-xl">
-              Abdihamid is a passionate software engineer and entrepreneur with a vision to revolutionize inventory management.
-              With years of experience in the tech industry, Abdihamid has built Inventory MS to address the real challenges faced by businesses in managing their inventory.
-              <br />
-              <br />
-              😂😂 OFC chatGPT wrote this text 4 me😂😂.
-            </p>
-          </div>
-        </section>
       </main>
     </div>
   );

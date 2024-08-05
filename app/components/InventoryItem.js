@@ -16,7 +16,7 @@ const generatePieceStyles = () => {
   return pieces;
 };
 
-export default function InventoryItem({ item, onDelete }) {
+export default function InventoryItem({ item, onAddQuantity, onUsedQuantity, onDelete }) {
   const [isVisible, setIsVisible] = useState(true);
   const [pieces, setPieces] = useState([]);
 
@@ -35,12 +35,26 @@ export default function InventoryItem({ item, onDelete }) {
         <p>Quantity: {item.quantity}</p>
         <p>{item.description}</p>
       </div>
-      <button
-        onClick={handleDeleteClick}
-        className="bg-red-500 text-white p-2 rounded"
-      >
-        Delete
-      </button>
+      <div className="flex space-x-2">
+        <button
+          onClick={() => onAddQuantity(item.id)}
+          className="bg-blue-500 text-white px-2 py-1 rounded-full"
+        >
+          Add
+        </button>
+        <button
+          onClick={() => onUsedQuantity(item.id)}
+          className="bg-orange-500 text-white px-2 py-1 rounded-full"
+        >
+          Used
+        </button>
+        <button
+          onClick={handleDeleteClick}
+          className="bg-red-500 text-white px-2 py-1 rounded-full"
+        >
+          Delete
+        </button>
+      </div>
       {!isVisible &&
         pieces.map((style, index) => (
           <div key={index} className="item-piece" style={style}>
